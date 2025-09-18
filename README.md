@@ -1,9 +1,9 @@
 # wazuhProject
 
-A home-lab project showing how to install **Wazuh** (manager + dashboard) on an Ubuntu server and how to enroll agents on other VMs.  
+A home-lab project showing how to install **Wazuh** Server on an Ubuntu server and how to enroll agents on other machines/VMs.  
 This guide helps build a realistic, SOC-style lab at home or in VMs.
 
-I am trying to make this project as simple as possible! 
+I want to make this project as simple as possible! 
 
 ---
 
@@ -24,6 +24,8 @@ Install a single-node Wazuh central stack (manager + indexer + dashboard) on one
 ---
 
 ## Wazuh Server Installation on Ubuntu Server 
+
+
 
 ## Wazuh Agent Deployment
 
