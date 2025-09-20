@@ -71,8 +71,6 @@ Step 2: Run the commands on Kali terminal
 <img width="1255" height="685" alt="agent deployment3" src="https://github.com/user-attachments/assets/49353b55-7356-4533-a1be-4a2a7eca10c7" />
 
 Step 3: Check the Wazuh Dashboard to confirm the agent is enrolled and shows status active.
-<img width="659" height="588" alt="agent deploy4" src="https://github.com/user-attachments/assets/6b21aa11-6b27-4bea-95d7-639704c160f0" />
-
 <img width="1264" height="511" alt="agent deploy5" src="https://github.com/user-attachments/assets/c1ba6783-ba69-48b8-a1e5-497b281daddf" />
 
 ## Playing with Alerts
