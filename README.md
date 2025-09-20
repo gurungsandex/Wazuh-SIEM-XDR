@@ -89,7 +89,7 @@ Step 3: Check the Wazuh Dashboard to confirm the agent is enrolled and shows sta
 ✅ Communication verified through alerts
 
 
-This gives you a working mini SOC home lab!
+This gives a working mini SOC home lab!
 
 
 
@@ -97,15 +97,16 @@ This gives you a working mini SOC home lab!
 
 Add more agents (Windows, other Linux VMs)
 
-Enable log collection from services (SSH, web servers)
-
-Configure File Integrity Monitoring (FIM)
-
 Create custom detection rules
 
 
+
 I will keep working on similar projects (SIEM, SOC labs, networking, detection rules) and share them here.
-💡 If you try this project, share your results — I’d love to see how you build on it!
+
+
+
+
+
 
 
 
