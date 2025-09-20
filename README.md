@@ -43,7 +43,9 @@ In this project, I will:
 
 ## 🛠️ Wazuh Server Installation on Ubuntu Server
 **Step 1**: Update packages and run the Wazuh installer:  
+            
             sudo apt update && sudo apt upgrade -y
+            
             curl -sO https://packages.wazuh.com/4.13/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
             
 Step 2: After installation, it will generate a username and password to access Wazuh server dashboard.
