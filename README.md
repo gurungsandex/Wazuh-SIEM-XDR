@@ -51,7 +51,7 @@ In this project, I will:
 Step 2: After installation, it will generate a username and password to access Wazuh server dashboard.
 <img width="1025" height="466" alt="wazuh server installation" src="https://github.com/user-attachments/assets/552f49ce-6298-49a4-92f0-75d616e3d38c" />
 
-Step 3: Find the server IP address of Ubuntu server (Wazuh server is hosted on Ubuntu), and use this IP to access the Wazuh dashboard in your browser. 
+Step 3: Find the server IP address of Ubuntu server (Wazuh server is hosted on Ubuntu), and use this IP to access the Wazuh dashboard in the browser. 
 <img width="1017" height="630" alt="server ip address" src="https://github.com/user-attachments/assets/e402632a-f8a5-4372-a3c2-70d531f72a5c" />
 
 Step 4: Login with the generated username and password to verify the dashboard is working.
@@ -61,7 +61,8 @@ Step 4: Login with the generated username and password to verify the dashboard i
 Step 1: From the Wazuh Dashboard, go to:
 👉 Deploy new agent
 Select agent OS type = Kali Linux (Debian-based)
-Server address = Ubuntu server IP address 
+Server address = Ubuntu server IP address.
+It will generate commands to deploy agent. 
 <img width="1093" height="670" alt="agent deployment1" src="https://github.com/user-attachments/assets/74eb35ff-9f8b-4276-8bf2-ec5d7eebc092" />
 
 Step 2: Run the commands on Kali terminal 
