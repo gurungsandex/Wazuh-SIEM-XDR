@@ -45,12 +45,11 @@ In this project, I will:
 **Step 1**: Update packages and run the Wazuh installer:  
             sudo apt update && sudo apt upgrade -y
             curl -sO https://packages.wazuh.com/4.13/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
-            Reference: Wazuh Documentation
-
+            
 Step 2: After installation, it will generate a username and password to access Wazuh server dashboard.
 <img width="1025" height="466" alt="wazuh server installation" src="https://github.com/user-attachments/assets/552f49ce-6298-49a4-92f0-75d616e3d38c" />
 
-Step 3: Find the server IP address (Wazuh server is hosted on Ubuntu), and use this IP to access the Wazuh dashboard in your browser. 
+Step 3: Find the server IP address of Ubuntu server (Wazuh server is hosted on Ubuntu), and use this IP to access the Wazuh dashboard in your browser. 
 <img width="1017" height="630" alt="server ip address" src="https://github.com/user-attachments/assets/e402632a-f8a5-4372-a3c2-70d531f72a5c" />
 
 Step 4: Login with the generated username and password to verify the dashboard is working.
@@ -58,7 +57,7 @@ Step 4: Login with the generated username and password to verify the dashboard i
 
 ## 🖥️ Wazuh Agent Deployment on Kali Linux
 Step 1: From the Wazuh Dashboard, go to:
-👉 Agents → Deploy new agent
+👉 Deploy new agent
 Select agent OS type = Kali Linux (Debian-based)
 Server address = Ubuntu server IP address 
 <img width="1093" height="670" alt="agent deployment1" src="https://github.com/user-attachments/assets/74eb35ff-9f8b-4276-8bf2-ec5d7eebc092" />
