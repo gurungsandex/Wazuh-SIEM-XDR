@@ -74,9 +74,19 @@ Step 3: Check the Wazuh Dashboard to confirm the agent is enrolled and shows sta
 <img width="1264" height="511" alt="agent deploy5" src="https://github.com/user-attachments/assets/c1ba6783-ba69-48b8-a1e5-497b281daddf" />
 
 ## Playing with Alerts
-            Loading........
+Privilege Escalation Demo
 
-            
+In this demo, I’ll show how Wazuh detects failed privilege-escalation attempts (wrong sudo password) and how those events travel from the agent to the server. This is a simple way to prove the agent ↔ server communication chain.
+1. On the Kali agent, I intentionally entered the wrong sudo password several times to trigger authentication failures.
+<img width="865" height="204" alt="login attempt" src="https://github.com/user-attachments/assets/510987dc-e83c-4446-9355-3e00b6b128cd" />
+
+2. These failed attempts show up in the Wazuh alerts, proving the agent is successfully reporting to the server. 
+<img width="898" height="631" alt="login attempt3" src="https://github.com/user-attachments/assets/70b5a7b2-e413-472b-afa5-25469be90349" />
+
+            Loading...
+
+
+
 
 ## 📌 Project Outcome
 
