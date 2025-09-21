@@ -103,13 +103,15 @@ This gives a working mini SOC home lab!
 
 ## 🚀 Next Steps
 
+Add more alert demonstrations 
+
 Add more agents (Windows, other Linux VMs)
 
 Create custom detection rules
 
 
 
-I will keep working on similar projects (SIEM, SOC labs, networking, detection rules) and share them here.
+
 
 
 
