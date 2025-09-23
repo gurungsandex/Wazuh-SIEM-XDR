@@ -74,7 +74,7 @@ Step 3: Check the Wazuh Dashboard to confirm the agent is enrolled and shows sta
 <img width="1264" height="511" alt="agent deploy5" src="https://github.com/user-attachments/assets/c1ba6783-ba69-48b8-a1e5-497b281daddf" />
 
 ## Playing with Alerts
-Privilege Escalation Demo
+## Privilege Escalation Demo
 
 In this demo, I’ll show how Wazuh detects failed privilege-escalation attempts (wrong sudo password) and how those events travel from the agent to the server. This is a simple way to prove the agent ↔ server communication chain.
 1. On the Kali agent, I intentionally entered the wrong sudo password several times to trigger authentication failures.
@@ -83,8 +83,24 @@ In this demo, I’ll show how Wazuh detects failed privilege-escalation attempts
 2. These failed attempts show up in the Wazuh alerts, proving the agent is successfully reporting to the server. 
 <img width="898" height="631" alt="login attempt3" src="https://github.com/user-attachments/assets/70b5a7b2-e413-472b-afa5-25469be90349" />
 
-            Loading...
 
+## File Integrity Monitoring
+In this demo, I will show how changes made on the agent are detected by Wazuh server, proving agent → server communication.
+1. Edit the agent’s configuration file: /var/ossec/etc/ossec.conf. In the "File Integrity Monitoring" section of ossec.conf file, enable the alerting/monitoring for the paths you want to watch (e.g., /root, /etc/hosts).
+
+            sudo nano /var/ossec/etc/ossec.conf
+   
+<img width="992" height="245" alt="file integrity 1" src="https://github.com/user-attachments/assets/1271ade0-8608-4ecc-a106-0b627c6cc168" />
+
+2. After editing, save the file and restart the agent so the new FIM settings take effect.
+   
+            sudo systemctl restart wazuh-agent
+
+3. Now, on the monitored machine, create and remove files (or edit files) in the monitored path to generate FIM events.
+<img width="732" height="510" alt="file integrity 2" src="https://github.com/user-attachments/assets/c063dcae-d432-49e1-b517-1cd3c1b001a1" />
+
+4. Now, view alerts on the Wazuh server. The alerts should be shown for the file creations/deletions performed.
+<img width="1203" height="643" alt="file integrity 3" src="https://github.com/user-attachments/assets/a28243b1-2e05-4a6d-bdf3-4938336fb77c" />   
 
 
 
