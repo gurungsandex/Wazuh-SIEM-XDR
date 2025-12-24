@@ -86,7 +86,7 @@ In this demo, I’ll show how Wazuh detects failed privilege-escalation attempts
 
 ## File Integrity Monitoring
 In this demo, I will show how changes made on the agent are detected by Wazuh server, proving agent → server communication.
-1. Edit the agent’s configuration file: /var/ossec/etc/ossec.conf. In the "File Integrity Monitoring" section of ossec.conf file, enable the alerting/monitoring for the paths you want to watch (e.g., /root, /etc/hosts).
+1. Before everything can function properly, we need to do some essential configurations to enable the system to work correctly. Edit the agent’s configuration file: /var/ossec/etc/ossec.conf. In the "File Integrity Monitoring" section of ossec.conf file, enable the alerting/monitoring for the paths you want to watch (e.g., /root, /etc/hosts).
 
             sudo nano /var/ossec/etc/ossec.conf
    
