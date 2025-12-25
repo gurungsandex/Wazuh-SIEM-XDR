@@ -127,7 +127,7 @@ When working on a Wazuh home lab, it’s common to face connection issues betwee
 
 One of the most common problems happens when you return to your lab after a few days. Even though the Wazuh server and agent were connected before, they may appear disconnected.
 
-Common checks on the Wazuh server
+## Common checks on the Wazuh server
 
 First, check the status of the following services on the server:
 
@@ -141,7 +141,7 @@ If any of them are not running, restart them:
             sudo systemctl restart wazuh-indexer
             sudo systemctl restart wazuh-dashboard
 
-Common checks on the Wazuh agent
+## Common checks on the Wazuh agent
 On the agent machine, check whether the agent service is running:
 
             sudo systemctl status wazuh-agent
@@ -151,7 +151,7 @@ If it is not running, start and enable it:
             sudo systemctl start wazuh-agent
             sudo systemctl enable wazuh-agent
 
-Server IP address change (very common issue)
+## Server IP address change (very common issue)
 Check the current IP address of the Wazuh server and note it down.
 
 On the agent machine, open the configuration file:
@@ -172,6 +172,67 @@ Save the file, then restart the agent:
 In most cases, these steps will resolve the server and agent connection issue.
 
 
+
+---------------------------------------------------------------------------------------
+
+## SSH Brute‑Force Attack from an External Machine
+
+In this demonstration, I show how an SSH brute‑force attack is detected in Wazuh Server.
+I simulate an attack from my host machine against a Linux agent running in a virtual machine.
+
+## Steps:
+
+Find the IP address of the agent (virtual machine).
+
+From the host machine, attempt to connect to the agent using SSH.
+
+Enter an incorrect username or password multiple times.
+
+<img width="575" height="180" alt="ssh attack 1" src="https://github.com/user-attachments/assets/d5f15086-1d01-4617-a9d2-7c15f54b477d" />
+
+
+Wazuh detects the failed login attempts and logs the event in the Wazuh server dashboard.
+This confirms that Wazuh is successfully monitoring and detecting external SSH brute‑force attempts.
+<img width="1133" height="636" alt="Screenshot 2025-12-25 at 5 04 35 PM" src="https://github.com/user-attachments/assets/67e4f252-ce5a-4e75-bc13-89f3f46a46e5" />
+
+In this type of brute‑force attack, incident responders such as SOC analysts observe log, the **source IP address** that attempted to log in to the system and other details in depth. Since the login attempts were unsuccessful and the attacker was unable to access the targeted machine, the appropriate containment action is to **block the attacker’s IP address** using security controls such as a firewall or intrusion prevention solution.
+
+## MITRE ATT&CK framework mapping
+We can also map the detected log to the MITRE ATT&CK framework, which helps identify the attacker’s behavior. In this case, the activity/MITRE technique is classified as Brute Force, with ID T1110, under the Credential Access tactic. Mapping security events to the MITRE ATT&CK framework is important because it provides a standard way to understand and describe attacks.
+MITRE mapping is used to: 
+            Standardize incident classification, 
+            Improve detection and response
+            Identify attack patterns and trends
+            Support threat hunting
+            Meet compliance and reporting requirements
+
+## Security Measures for SSH BruteForce Attack
+
+## 🔐 Preventive Controls
+
+            Disable password‑based SSH login and use SSH key authentication.
+
+            Restrict SSH access to specific IP addresses.
+
+            Change the default SSH port.
+
+            Enforce strong password policies.
+
+## 🛡️ Detection & Response
+
+            Enable account lockout after multiple failed login attempts.
+
+            Use tools like fail2ban to automatically block attacking IPs.
+
+            Monitor authentication logs continuously using a SIEM (like Wazuh).
+
+## 📋 Best Practices
+
+            Regularly review SSH access logs.
+
+            Apply system updates and patches.
+
+            Follow the principle of least privilege for user accounts.
 
 
 
