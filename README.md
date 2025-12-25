@@ -117,7 +117,8 @@ This gives a working mini SOC home lab!
 
 
 
--------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Server-Agent Connection Troubleshotting
@@ -235,6 +236,8 @@ MITRE mapping is used to:
             Follow the principle of least privilege for user accounts.
 
 
+
+This Wazuh home lab is an ongoing project. I will continue expanding and refining this lab environment by adding more attack scenarios, detections, and incident response use cases.
 
 
 
