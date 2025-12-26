@@ -3,7 +3,9 @@ This home-lab project helps build a realistic, SOC-style lab at home or in VMs.
 This home lab project demonstrates how to host a **Wazuh Server** on an Ubuntu server and how to enroll agents on other machines/VMs.  
 
 I want to make this project as simple as possible!  
+
 This gives a working mini SOC home lab!
+
 ---
 
 ## ✅ Advantages of this project
