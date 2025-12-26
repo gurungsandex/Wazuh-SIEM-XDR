@@ -59,6 +59,7 @@ Step 3: Find the server IP address of Ubuntu server (Wazuh server is hosted on U
 Step 4: Login with the generated username and password to verify the dashboard is working.
 <img width="993" height="573" alt="wazuh dashboard" src="https://github.com/user-attachments/assets/4c3da5a3-0ae9-47e2-b033-1754eaf66551" />
 
+---------------------------------------------------------------------------------------------------------------------------------------------
 ## 🖥️ Wazuh Agent Deployment on Kali Linux
 Step 1: From the Wazuh Dashboard, go to:
 👉 Deploy new agent
@@ -75,6 +76,7 @@ Step 2: Run the commands on Kali terminal
 Step 3: Check the Wazuh Dashboard to confirm the agent is enrolled and shows status active.
 <img width="1264" height="511" alt="agent deploy5" src="https://github.com/user-attachments/assets/c1ba6783-ba69-48b8-a1e5-497b281daddf" />
 
+---------------------------------------------------------------------------------------------------------------------------------------------
 ## Playing with Alerts
 ## Privilege Escalation Demo
 
@@ -85,7 +87,7 @@ In this demo, I’ll show how Wazuh detects failed privilege-escalation attempts
 2. These failed attempts show up in the Wazuh alerts, proving the agent is successfully reporting to the server. 
 <img width="898" height="631" alt="login attempt3" src="https://github.com/user-attachments/assets/70b5a7b2-e413-472b-afa5-25469be90349" />
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------
 ## File Integrity Monitoring
 In this demo, I will show how changes made on the agent are detected by Wazuh server, proving agent → server communication.
 1. Before everything can function properly, we need to do some essential configurations to enable the system to work correctly. Edit the agent’s configuration file: /var/ossec/etc/ossec.conf. In the "File Integrity Monitoring" section of ossec.conf file, enable the alerting/monitoring for the paths you want to watch (e.g., /root, /etc/hosts).
@@ -104,9 +106,7 @@ In this demo, I will show how changes made on the agent are detected by Wazuh se
 4. Now, view alerts on the Wazuh server. The alerts should be shown for the file creations/deletions performed.
 <img width="1203" height="643" alt="file integrity 3" src="https://github.com/user-attachments/assets/a28243b1-2e05-4a6d-bdf3-4938336fb77c" />   
 
-
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------
 ## SSH Brute‑Force Attack from an External Machine
 
 In this demonstration, I show how an SSH brute‑force attack is detected in Wazuh Server.
