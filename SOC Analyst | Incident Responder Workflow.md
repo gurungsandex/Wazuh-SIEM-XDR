@@ -111,6 +111,6 @@ I am writing a general SOC workflow to explain how incident handling works in re
 
   Conduct additional threat hunting
 
-  Train analysts based on lessons learned
+  Train team based on lessons learned
 
   
