@@ -6,7 +6,7 @@ I am writing a general SOC workflow to explain how incident handling works in re
 
 ## 2. Detection & Alert Generation
   
-  A security event is detected by Wazuh.
+  A security event is detected by Wazuh/SIEM.
 
   Identify potential security incidents as early as possible.
 
